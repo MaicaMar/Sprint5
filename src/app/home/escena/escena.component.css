@@ -1,0 +1,43 @@
+.custom-button {
+  background-color: #000000; /* Cambia el color de fondo según tus preferencias. */
+  border: none;
+  border-radius: 50%; /* Hace que el botón sea circular. */
+  width: 50px; /* Ajusta el tamaño del botón según tus necesidades. */
+  height: 50px;
+  color: white; /* Color del icono de flecha. */
+  font-size: 26px; /* Tamaño de la fuente del icono de flecha. */
+  line-height: 0px; /* Centra verticalmente el icono. */
+  text-align: center; /* Centra horizontalmente el icono. */
+  cursor: pointer;
+}
+
+.dot {
+  font-size: 35px;
+  color: #000; /* Color del punto cuando no estás en esa página */
+  -webkit-text-stroke: 1px black;  /* Contorno blanco */
+  margin: 0 5px; /* Espaciado entre los puntos */
+}
+
+.current-dot {
+  font-size: 35px;
+  color: #fff; /* Color del punto cuando estás en esa página */
+  /*background-color: #000; /* Fondo negro */
+  border-radius: 50%; /* Hace que el punto tenga forma de círculo */
+  margin: 0 5px; /* Espaciado entre los puntos */
+  -webkit-text-stroke: 1px black; /* Contorno negro */
+}
+
+.custom-column {
+  height: 50vh; /* Cambia el valor (60vh) según tus necesidades */
+}
+
+h4 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-size: small;
+}

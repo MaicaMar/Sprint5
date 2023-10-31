@@ -1,0 +1,45 @@
+<div class="container bg-white mt-5" style="max-width: 576px; margin: 0 auto; border-radius: 20px;">
+
+  <div class="row">
+
+    <div class="col-12 custom-column d-flex justify-content-center" [style.background-color]="steps[currentStep].bgcolor" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+      <img [src]="steps[currentStep].img" alt="{{ steps[currentStep].title }}" class="img-fluid d-block mx-auto my-auto">
+    </div>
+
+    <div class="col-12">
+      <h4 class="mt-5 px-3">{{ steps[currentStep].title }}</h4>
+      <p class="px-3 mb-4">{{ steps[currentStep].description }}</p>
+    </div>
+
+  </div>
+
+  <div class="row" style="max-width: 576px; margin: 0 auto;">
+
+    <div class="col-6">
+      <!-- Indicadores de página -->
+      <ul class="pagination d-flex">
+        <li *ngFor="let step of steps; let i = index" [class.active]="i === currentStep" class="page-item">
+          <span>
+            <span [class.dot]="i !== currentStep" [class.current-dot]="i === currentStep">•</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-6 d-flex justify-content-end align-items-center">
+      <!-- Botones y navegación -->
+      <button *ngIf="currentStep > 0" (click)="previousStep()" class="custom-button">&#9665;</button>
+      <button *ngIf="currentStep < steps.length - 1" (click)="nextStep()" class="custom-button ms-2">&#9655;</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Angular no asume que todas las propiedades personalizadas en tus objetos de datos deban mapearse directamente a estilos de CSS. Para aplicar el color de fondo 'bgcolor' en cada objeto del array 'iStep[]', usar la sintaxis [style.background-color] en el HTML -->
+
